@@ -25,7 +25,5 @@ public class SelenideRepository {
         $("#wiki-body").find(byText("Soft assertions")).click();
         // ищем пример кода для JUnit5
         $("#wiki-content").shouldHave(text("Using JUnit5 extend test class"));
-        // задержка для просмотра экрана
-        sleep(5000);
     }
 }
