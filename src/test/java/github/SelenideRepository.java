@@ -16,7 +16,7 @@ public class SelenideRepository {
         // ввести в поле поиска selenide и нажать Enter
         $("[data-test-selector=nav-search-input]").setValue("selenide").pressEnter();
         // нажимаем на линк от первого результата поиска
-        $$("ul.repo-list li").first().$("a").click();
+        $("ul.repo-list li").$("a").click();
         // переходим на таб Wiki
         $("#wiki-tab").click();
         // проверяем, что есть текст Soft assertions
@@ -26,6 +26,6 @@ public class SelenideRepository {
         // ищем пример кода для JUnit5
         $("#wiki-content").shouldHave(text("Using JUnit5 extend test class"));
         // задержка для просмотра экрана
-        sleep(10000);
+        sleep(5000);
     }
 }
